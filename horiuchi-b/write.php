@@ -13,7 +13,7 @@
 
             try {
 # MySQLデータベースに接続します☆レシピ260☆（データベースに接続したい）。
-                $db = new PDO($dsn, $dbUser, $dbPass);
+                $db = new PDO($dsn, $_SERVER["C4SA_MYSQL_USER"], $_SERVER["C4SA_MYSQL_PASSWORD"]);
                 $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

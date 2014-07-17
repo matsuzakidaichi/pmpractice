@@ -10,12 +10,12 @@
         session_start();
         $input_data1 = 1;
         /* ＩＤとパスワード照合 */
-        $dsn = 'mysql:dbname=tgsrdb;host=localhost';
-        $user = 'geru';
-        $password = 'n1242098';
+        $dsn = sprintf('mysql:host=%s;dbname=%s;charset=utf8',$_SERVER["C4SA_MYSQL_HOST"],$_SERVER["C4SA_MYSQL_DB"]);
+        $user = 'chmqbh0_ar1';
+        $password = 'lHaJv32n';
         $key = 0;
         try {
-            $dbh = new PDO($dsn, $user, $password);
+           $dbh = new PDO($dsn, $_SERVER["C4SA_MYSQL_USER"], $_SERVER["C4SA_MYSQL_PASSWORD"]);
             $sql = 'select * from home';
             foreach ($dbh->query($sql) as $row) {
                 if ($row['ID'] == $input_data1) {
@@ -52,7 +52,7 @@
 
 
         try {
-            $dbh = new PDO($dsn, $user, $password);
+            $dbh = new PDO($dsn, $_SERVER["C4SA_MYSQL_USER"], $_SERVER["C4SA_MYSQL_PASSWORD"]);
             $sql = 'select * from eat';
             foreach ($dbh->query($sql) as $row) {
                 if ($row['ID'] == $input_data1) {
@@ -86,7 +86,7 @@
 
 
         try {
-            $dbh = new PDO($dsn, $user, $password);
+           $dbh = new PDO($dsn, $_SERVER["C4SA_MYSQL_USER"], $_SERVER["C4SA_MYSQL_PASSWORD"]);
             $sql = 'select * from rest';
             foreach ($dbh->query($sql) as $row) {
                 if ($row['ID'] == $input_data1) {

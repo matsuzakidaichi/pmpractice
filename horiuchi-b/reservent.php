@@ -3,7 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>アドレス登録</title>
     </head>
-    <body bgcolor="#87ceeb">
+    <body bgcolor="#87ceeb"leftmargin="120px">
 
         <FONT size="7">
         ご<font color="#ee82ee">予</font>約番号入力
