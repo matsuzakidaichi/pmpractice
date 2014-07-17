@@ -20,18 +20,17 @@
         $rental=($_GET['rental']);
         $rezi=($_GET['rezi']);
         $rehun=($_GET['rehun']);
-        
-        
+       
 		/*入出力確認*/
                session_start();
                 $input_data1 = $_SESSION["hidden_data2"];
-        /* ＩＤとパスワード照合 */
-         $dsn = sprintf('mysql:host=%s;dbname=%s;charset=utf8',$_SERVER["C4SA_MYSQL_HOST"],$_SERVER["C4SA_MYSQL_DB"]);
+		/*ＩＤとパスワード照合*/
+		 $dsn = sprintf('mysql:host=%s;dbname=%s;charset=utf8',$_SERVER["C4SA_MYSQL_HOST"],$_SERVER["C4SA_MYSQL_DB"]);
         $user = 'chmqbh0_ar1';
         $password = 'lHaJv32n';
 		$key = 0;
-        try {
-            $dbh = new PDO($dsn, $_SERVER["C4SA_MYSQL_USER"], $_SERVER["C4SA_MYSQL_PASSWORD"]);
+		try{
+		   $dbh = new PDO($dsn, $_SERVER["C4SA_MYSQL_USER"], $_SERVER["C4SA_MYSQL_PASSWORD"]);
 		    $sql = 'select * from rest';
                     foreach ($dbh->query($sql) as $row) {
     			if($row['ID'] == $input_data1){
@@ -67,20 +66,20 @@
     確<font color="#6b8e23">認</font>画面<br><br><br>
     </FONT>
     <form action="writent.php" method="POST">
-    <input type="hidden" name="ID"value="<?=$input_data1?>" >
-    <input type="hidden" name="dinner"value="<?=$dinner?>" >
-    <input type="hidden" name="breakfast"value="<?=$breakfast?>" >
-    <input type="hidden" name="dzi"value="<?=$dzi?>" >
-    <input type="hidden" name="dhun"value="<?=$dhun?>" >
-    <input type="hidden" name="bzi"value="<?=$bzi?>" >
-    <input type="hidden" name="bhun"value="<?=$bhun?>" >
-    <input type="hidden" name="institution"value="<?=$institution?>" >
-    <input type="hidden" name="zi"value="<?=$zi?>" >
-    <input type="hidden" name="hun"value="<?=$hun?>" >
-    <input type="hidden" name="place"value="<?=$place?>" >
-    <input type="hidden" name="rental"value="<?=$rental?>" >
-    <input type="hidden" name="rezi"value="<?=$rezi?>" >
-    <input type="hidden" name="rehun"value="<?=$rehun?>" >
+    <input type="hidden" name="ID"value="<?php echo $input_data1?>" >
+    <input type="hidden" name="dinner"value="<?php echo $dinner?>" >
+    <input type="hidden" name="breakfast"value="<?php echo $breakfast?>" >
+    <input type="hidden" name="dzi"value="<?php echo $dzi?>" >
+    <input type="hidden" name="dhun"value="<?php echo $dhun?>" >
+    <input type="hidden" name="bzi"value="<?php echo $bzi?>" >
+    <input type="hidden" name="bhun"value="<?php echo $bhun?>" >
+    <input type="hidden" name="institution"value="<?php echo $institution?>" >
+    <input type="hidden" name="zi"value="<?php echo $zi?>" >
+    <input type="hidden" name="hun"value="<?php echo $hun?>" >
+    <input type="hidden" name="place"value="<?php echo $place?>" >
+    <input type="hidden" name="rental"value="<?php echo $rental?>" >
+    <input type="hidden" name="rezi"value="<?php echo $rezi?>" >
+    <input type="hidden" name="rehun"value="<?php echo $rehun?>" >
  
    
     <font style="position: relative; left: 100px; top: 0px;" >氏名</font><input type="text" name="simei" size="40"  value="<?php echo$data2?>" style="position: relative; left: 400px; top: 0px;"><br>

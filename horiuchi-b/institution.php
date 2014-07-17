@@ -18,13 +18,12 @@
         <font size="7">施<font color="#33cccc">設</font>の利用について</font>
         <br><br><br>
         <form action="check.php" method="get">
-            <input type="hidden" name="ID"value="<?= $ID ?>" >
-            <input type="hidden" name="dinner"value="<?= $dinner ?>" >
-            <input type="hidden" name="breakfast"value="<?= $breakfast ?>" >
-            <input type="hidden" name="dzi"value="<?= $dzi ?>" >
-            <input type="hidden" name="dhun"value="<?= $dhun ?>" >
-            <input type="hidden" name="bzi"value="<?= $bzi ?>" >
-            <input type="hidden" name="bhun"value="<?= $bhun ?>" >
+            <input type="hidden" name="dinner"value="<?php echo $dinner ?>" >
+            <input type="hidden" name="breakfast"value="<?php echo $breakfast ?>" >
+            <input type="hidden" name="dzi"value="<?php echo $dzi ?>" >
+            <input type="hidden" name="dhun"value="<?php echo $dhun ?>" >
+            <input type="hidden" name="bzi"value="<?php echo $bzi ?>" >
+            <input type="hidden" name="bhun"value="<?php echo $bhun ?>" >
 
             <input type="radio" name="institution" value="利用する"style="position: relative; left: 353px; top: 0px;"checked>
             <font size="5"style="position: relative; left: 354px; top: 0px;" >利用する</font>
